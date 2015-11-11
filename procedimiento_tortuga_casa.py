@@ -21,11 +21,16 @@ def casa(juanita, lado):
     triangulo(juanita, lado)    
 
 from turtle import *        # usa la libreria turtle
+from random import randrange # usa la función randrange de la librería de números aleatorios
+
 
 espacio = Screen()            # crea una pantalla de tortuga (espacio)
-
 juanita = Turtle()             # crea una tortuga llamada juanita
-casa(juanita, 90)
-casa(juanita,10)
-casa(juanita, 200)
+
+for veces in range(10):
+    juanita.setpos(randrange(300),randrange(200))   #posicióna la tortuga en doordenadas x e y aleatorias
+    casa(juanita, randrange(30))    # dibuja una tortuga de tamaño aleatorio
+
+
+
            
