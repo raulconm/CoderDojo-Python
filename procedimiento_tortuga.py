@@ -8,7 +8,8 @@ def cuadrado(tortuga):
     tortuga.forward(100)
     tortuga.right(90)
 
-from turtle import *     # use the turtle library
-space = Screen()         # create a turtle screen
-juanita = Turtle()       # create a turtle named malik
-cuadrado(juanita)        # draw a square with malik
+from turtle import *     # utiliza la libreria turtle
+espacio = Screen()         # crea el espacio para la tortuga
+juanita = Turtle()       # crea la tortuga juanita
+cuadrado(juanita)        # dibuja un cuadrado con la tortuga juanita
+
