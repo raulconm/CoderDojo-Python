@@ -1,15 +1,16 @@
 import urllib
 import webbrowser
+from xml.etree.ElementTree import parse
 
 from urllib.request import urlopen
 
-#u = urlopen('servicios.emtmadrid.es:8080/rss/emtrss.xml')
-#datos = u.read()
-#archivo = open('servicios_emt.xml', 'wb')
-#archivo.write(datos)
-#archivo.close()
+u = urlopen('http://servicios.emtmadrid.es:8080/rss/emtrss.xml')
+datos = u.read()
+archivo = open('servicios_emt.xml', 'wb')
+archivo.write(datos)
+archivo.close()
 
-from xml.etree.ElementTree import parse
+
 
 documento = parse('servicios_emt.xml')
 
@@ -23,4 +24,3 @@ for channel in documento.findall('channel'):
         
         
 
-print('fin')
